@@ -1,4 +1,7 @@
-﻿using System;
+﻿// This page is Code Behind Page.(C-Sharp lang)
+// This is for server side coding.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

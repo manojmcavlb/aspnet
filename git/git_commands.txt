@@ -1,0 +1,372 @@
+// Git Basic commands:
+// git config --global user.name "Manojkumar Mylsamy"
+// git config --global user.email manojmcavlb@gmail.com
+// git init
+// git clone [repo]
+// git remote show origin
+// git add .
+// git commit -am "type ur message"
+// git diff
+// git reset HEAD~
+// git status
+// git rm
+// git log -n5
+// git show
+// git tag
+// git branch [newBranch]
+// git checkout [branch]
+// git merge [branch]
+// git remote
+// git push origin [branch]
+// git pull
+// git stash
+// git fetch
+
+
+//********IMP*******/
+//GIT FIRST TIME CONFIG for new folder or new machine or OS format.
+// 1. In VS, click account sync>githutub>Sign-in
+// 2. Configure
+// git config --global user.name "Manojkumar Mylsamy"
+// git config --global user.email manojmcavlb@gmail.com
+// git config --global user.name/email "Manojkumar Mylsamy"
+
+// run below command to resolve Error: "json-server.ps1 cannot be loaded because running scripts is disabled on this system."
+// launch WindowsPowershell.exe > then run below command:
+// Set-ExecutionPolicy -Scope LocalMachine Unrestricted
+
+
+
+
+
+
+
+// 1.Version Control System?
+// 2.GIT?
+// open source, code management system with version control
+// track local file changes and share changes with a remote repository.
+//No Cloud feature.
+
+// Top 10 best Git hosting solutions and services in 2021
+// Bitbucket-Atlassian
+// GitHub-Microsoft owned
+// GitLab-Open Source
+// Perforce
+// Beanstalk
+// Amazon AWS CodeCommit
+// Codebase
+// Microsoft Azure DevOps
+// SourceForge
+// Gerrit
+
+// 3.Git Advantages:
+// Easy to use, good performance, data replication, tracks files history
+
+// 4.Git Programming Language: C programming lang(simple, fast & no overheads like garbage collection or dynamic typing)
+
+// 5.Git Architecture: Distributed Architecture.(It is not a single server and code can be in different servers)
+
+// 6.GitHub? vs Gitlab?
+// GitHub is not open source.-->Owned by Microsoft now.
+// It is unlimited free for public repositeries and for private one it is paid.
+// check the commit history.(No DevelopmentCharts View)
+// There is a limited private repository.
+// It supports only Git version control.
+
+// GitLab is open-source for community edition.
+// It allows users to make public repository.	GitLab also provides free private repository.
+// GitLab provides user to see project development charts.
+// GitLab is freely available and open is source for community edition
+// It is a cloud-native application and is highly secure.
+// GitLab is available with many bugs and it makes user experience sloppy.
+// It is difficult to manage code reviews for the first timers.
+
+
+// Basic Commands:
+// https://www.edureka.co/blog/git-commands-with-example/
+// "C:\my_repo_directory>ls": this will list the files & folders inside the current directory("my_repo_directory")
+
+
+// 7.Git Config ?
+// This command sets the author name and email address respectively to be used with your commits.
+// git config --global user.name "ManojKumar Mylsamy": sets up a user name
+// git config --global user.email "manoj@gmail.com": sets up a user name
+
+// Colorized Output:
+// git config -global color.branch auto
+
+
+// 7.Git Repository
+// Directory with metadata-Git stores all files with version info. Local repo or Remote Repo.
+
+// Create Git Repo ?
+//  First, Create a directory for the project.
+// Run "git init \" command: creates a.git directory within the project directory.
+// or
+// Run "git init /home/edureka/Manoj"
+// Result:Initialized empty Git repository in /home/edureka/Manoj/.git
+
+// Create a new bare repository
+// git init --bare /path/to/repo.git
+
+// Diff bw Directory Vs Repo
+// Directory: Files, Directories only
+// Repository: Files, Directories and also History("git init command will create this .git, so this will keep track of all history :) hahaha  ")
+
+
+// Basic Commands:
+// "C:\my_repo_directory>ls -a ": this will list the files & folders inside the current directory("my_repo_directory")
+
+
+
+// 9.How to do Git commit ?
+// "git add <filename.extension>" // This command adds a file to the staging area.
+//git add . //This command adds one or more unstaged files to staging area.
+// git add * //This command try to add all unstaged files as well as ask -f to force add build, node_modules, .git, etc.
+
+// git commit
+// Commit the staged snapshot. This will launch a text editor prompting you for a commit message. After you’ve entered a message, save the file and close the editor to create the actual commit.
+
+// Usage: git commit -m “[ Type in the commit message]”
+// This command records or snapshots the file permanently in the version history.
+// Usage: git commit -a
+// This command commits any files you’ve added with the git add command and also commits any files you’ve changed since then.
+// git commit -am "commit message"
+// A power user shortcut command that combines the -a and -m options. This combination immediately creates a commit of all the staged changes and takes an inline commit message.
+
+// "git commit -amend": fix any broken commit
+// Edit the last committed message
+
+// Command: git commit --amend
+// Do not amend the commit message which is already pushed on to a remote repository and shared with others, as that would make the earlier commit history invalid and thus any work based on that may be affected.
+
+// 10.what is Git diff ?
+// Usage: git diff
+// This command shows the file differences which are not yet staged.
+
+// Usage: git diff –staged
+// This command shows the differences between the files in the staging area and the latest version present.
+
+// Usage: git diff [first branch] [second branch]
+// This command shows the differences between the two branches mentioned.
+
+// ex.: "git diff-tree -r": list all these files
+
+// 11.Git reset:
+// git reset
+// Usage: git reset [file]
+// This command unstages the file, but it preserves the file contents.
+
+// Usage: git reset [commit]
+// This command undoes all the commits after the specified commit and preserves the changes locally.
+
+// Usage: git reset –hard [commit]
+// This command discards all history and goes back to the specified commit.
+
+
+// 11.what is Git status ?
+// Usage: git status
+// it lists the files in the working directory(unstaged), and staging area/index(i.e., files to be committed once staged).
+
+// 12.Git rm  (Unstage/Delete):
+// git rm
+// Usage: git rm [file]
+// This command deletes the file from your working directory and stages the deletion.
+
+// "git rm --cached <filepath>":" makes git stop tracking the file completely
+// or
+// "git reset HEAD <filepath>": unstages any modifications made to the file since the last commit
+// "git reset HEAD~": completely removes the modified files.
+
+
+// 13.what is Git log ?
+//     Gives version history records about the project commits.like the developer, date, etc.
+
+// git log                              : returns recent 10 commits by default
+// git log -n 3"                        : returns recent 3 commits
+// git log --author="John Smith"
+// git log --committer="John smith"
+// git log --after="2019-3-2"
+// git log --before="yesterday"
+// git log --after="2019-3-2" --before="2019-3-19"
+// git log -- main.py
+// git log -S"# Introduction"
+// git log <since>..<until>
+// git log b72beb5..b53b22d
+// git log --grep="feat:"
+// git log --oneline
+// git log --decorate
+
+// Usage: git log –follow [file]
+// This command lists version history for a file, including the renaming of files also.
+
+// 14.what is Git show?
+//     Gives the changes of a particular commit
+//"git show": shows the last commit done in the current branch.
+// Usage: git show [commit]
+// This command shows the metadata and content changes of the specified commit.
+
+// 15.git tag
+// Usage: git tag [commitID]
+// This command is used to give tags to the specified commit.
+
+// 16.Git branch ?
+// Usage: git branch
+// This command lists all the local branches in the current repository.
+// [*branch is the working branch with green color highlighted.
+
+// Usage: git branch [branch name]
+// This command creates a new branch.
+
+// Usage: git branch -d [branch name]
+// This command deletes the feature branch.
+
+// git checkout
+// Usage: git checkout [branch name]
+// This command is used to switch from one branch to another.
+
+// Usage: git checkout -b [branch name]
+// This command creates a new branch and also switches to it.
+
+// Git rename
+// git branch -m oldBranchName newBranchName
+
+// 17.git merge
+// Usage: git merge [branch name]
+
+// This command merges the specified branch’s history into the current branch.
+
+// 18.What are Git Master and Branches?
+// Master=main copy of the code; Branch = independent copy of the code.
+// ex.:Develop branch or Hotfix branch
+// git merge, git branch --merged
+
+// 19.What is differnce between git merge and git rebase?
+// Both commands can be used to commit. The differnce is that rebase wries a liner commit history.
+
+// 21.How to check Git branch merge?
+// "git branch --merge": shows the merged branches
+// "git branch --no merged": shows the branches not yet merged
+
+// 22.git remote
+// Usage: git remote add [variable name] [Remote Server Link]
+// This command is used to connect your local repository to the remote server.
+
+// 23.git push
+// Usage: git push [variable name] master
+// This command sends the committed changes of master branch to your remote repository.
+
+// Usage: git push –all [variable name]
+// This command pushes all branches to your remote repository.
+
+// Usage: git push [variable name] :[branch name]
+// This command deletes a branch on your remote repository.
+
+// 24.Git Pull Vs Fetch ?
+// Usage:  git pull [Repository Link]
+// This command fetches and merges changes on the remote server to your working directory.
+
+// Git Pull new changes or commits from a particular branch from your central repo.
+// Git Fetch is used for same purpose, but in slightly different way.
+// Git Pull = Git Fetch + Git Merge
+
+// 25.What is Git stash/unstash?
+// Useful git command if you have to move to another task immediately without pushing the current committed code.
+// "git stash save dummy_manoj_changes": puts the working directory on a stack and gives a clean working directory.
+// Later you checkout show other branch and come back to dummy branch, get all edits aback using git stash apply command.
+// "git stash list": this will display all the list of stashed directories.
+// "git stash apply stash@(0)": this will restore our stashed half done changes back to our branch.
+//Here stash ID is 0 since our last stash in current directory. if some other branch is stash then second stash ID will be 1, 2...
+//or another way
+// "git stash pop": most recent stash.
+
+// "git stash clear": This will clear ALL the current stashes.
+// "git stash drop stash@(1)": This will only clear particular stash.
+
+
+// Usage: git stash save
+// This command temporarily stores all the modified tracked files.
+
+// Usage: git stash pop
+// This command restores the most recently stashed files.
+
+// Usage: git stash list
+// This command lists all stashed changesets.
+
+// Usage: git stash drop
+// This command discards the most recently stashed changeset.
+
+
+// 26.what is Git revert ?
+// 2 ways:
+//      1.Git revert[commit name]: undo the changes made in the particular commit.
+//      Git revert can even undo multiple commits
+//      2.Remove or fix the the bad file in a new commit and then push it to the repo.
+
+
+// 27.what is Head is Git?
+// Pointer to the currently checked out branch for Git commit.
+// A Git repository can have multiple Heads.
+// Master: the default Head in Git
+
+
+// 28.What is Git Staging area or Index?
+// Staging Area: Intermediate area between working directory and the Git local repo.
+// "git add": adds a file to the staging area for review.
+// If good, "git commit" adds the file to the repo.
+
+
+// Stage:
+// Stage all files: "git add ."
+// Stage a file: "git add example.html" (replace example.html with your file name)
+// Stage a folder: "git add myfolder" (replace myfolder with your folder path)
+
+// You should see there are changes ready to be committed: "git status"
+
+// 29.Git cherry-pick?
+// "Git cherry-pick": commit from one branch to another branch in the repository.
+
+// 30.What is a Git conflict? //*****************IMP******************************************************
+// Two commits have a changes in the same file and same location.
+// A conflict has to be resolved for correct code to be committed.
+
+// 31.How can you resolve a Git conflict?//*****************IMP******************************************************
+// //Edit the file manually to remove the conflict.
+// Then "git add file" followed by "git commit"
+
+// 32.What is git Clone?
+// "git clone": copies the Git repository. If you clone the repo, you will get complete history of the proj in another location
+
+// 33.What is diff. git Clone and Git remote?
+// "git clone": copies the existing Git repository in another directory and crate a new repo.
+// But Git remote is the central repo.
+
+// 34.What are hooks in Git?
+// Scripts that are run after running the respective Git commands.
+
+// 35.How can you integrate Git with Jenkins?
+// Manage Jenkins>Manage Plugins>Select Git Plugin>Click Install
+
+
+// 36.SubGit-is a tool for SVN to Git migration.
+// It can create a writable git mirror of a local or remote subverion repo.and use both Subversion and Git as lng as you like!
+
+
+// 1.Create New Repo-Master Branch
+// 2.Commit(Save) the new changes
+// 3.Create SubBranch(Owner) or Fork(ThirdParty Copy Branch)
+// 4.Pull Request()-Review/Merge Code into Master Branch.
+// 5.Merge Conflicts.
+// 6.
+
+
+
+// enum
+
+
+
+// Advanced:
+// https://www.edureka.co/blog/common-git-mistakes/
+// https://www.edureka.co/blog/git-reflog/
+// https://www.edureka.co/blog/git-format-commit-history/
+// https://www.edureka.co/blog/git-bisect/

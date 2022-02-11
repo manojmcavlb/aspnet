@@ -1,10 +1,175 @@
-﻿<!DOCTYPE html>
+﻿<!-- HTML5-must need to provide. Now a days its compatible with all browsers. -->
+<!DOCTYPE html>
 <html>
+<!-- mainly head tag consists of files, links such as external css/js
+Also it contains what of os or browser the user is using, device resolution-->
+
 <head>
+
     <meta charset="utf-8" />
     <title>Browser Title</title>
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+    <script type="text/javascript">
+        //ES5
+        function handleClick() {
+            alert('validate if everthing ok');
+        }
+        // Arrow Function//ES6
+        // handleClick = () => alert('validate if everthing ok');
+
+
+        //This function is used to validate all the input controls in the page and send the server request
+        function validate() {
+            // var something1 = undefined;
+            // var something2 = null;
+            // var val = 1;
+            // var name = 'manoj';
+            // var isChecked = false;
+            // var arr = [1,2,3];
+            // var obj = {
+            //     a: 1,
+            //     b: 3,
+            //     c: 2
+            // };
+
+            // debugger;
+
+            var txtFirstName = document.getElementById("txtFirstName");
+            var txtSecondName = document.getElementById("txtSecondName");
+
+                //=== will also check for types in both sides, but not ==.
+            // if ( 1 === "1"){
+            //     alert('inside if')
+            // } else {
+            //     alert('inside else')
+            // }
+
+            
+            // if ( 1 == "1"){
+            //     alert('inside if')
+            // } else {
+            //     alert('inside else')
+            // }
+
+
+
+            // // alert(txtFirstName)
+            // console.log(txtFirstName) //Object
+            // console.log(txtFirstName.value) //'Manoj'
+            // console.log(txtFirstName.text) //undefined
+            // console.log(txtFirstName.length) //undefined
+            // console.log(txtFirstName.value.length) //10
+
+
+            //DESIGN PATTERN-NULL OBJECT
+            // if (txtFirstName !== "" && txtFirstName !== null && txtFirstName !== undefined && txtFirstName && txtFirstName.value.length === ""){
+        
+
+                console.log('txtFirstName:', txtFirstName.value === '')
+
+
+            if (txtFirstName && txtFirstName.value.length === 0){
+                alert('Please enter First Name');
+                txtFirstName.focus();
+            } else  if (txtFirstName.value.length < 8
+                || txtFirstName.value.length > 16){
+                alert('Please enter valid First Name bw 8 to 16');
+                txtFirstName.focus();
+            }
+            
+            // console.log('txtFirstName:', txtFirstName)
+            // console.log('txtSecondName:', txtSecondName)
+
+            if (txtSecondName && txtSecondName.value.length === 0){
+                alert('Please enter Second Name');
+                txtSecondName.focus();
+            } else  if (txtSecondName.value.length < 8
+                || txtSecondName.value.length > 16){
+                alert('Please enter valid Second Name bw 8 to 16');
+                txtSecondName.focus();
+            }
+
+            
+
+
+
+            if (txtAge && txtAge.value.length === 0){
+                alert('Please enter age');
+                txtAge.focus();
+            } else  if (txtAge.value.length > 3){
+                alert('Please enter valid age below 3 digit no.');
+                txtAge.focus();
+            }
+
+
+            
+        }
+
+        function handleDepartment(e){
+
+            console.log('im coming again from every select, how to identify from where it was invoked. Anser: event/this obj need to be passed')
+            console.log(e)
+            console.log(e.value)
+        }
+
+
+
+    </script>
 </head>
+
 <body>
 
+    <p>This is para</p>
+    <br />
+    <br />
+    <br />
+    <div></div>
+    <div></div>
+    <div></div>
+    <div>This div will come in next line. No floating</div>
+    <div>This div will come in next line. No floating</div>
+    <div>This div will come in next line. No floating</div>
+    <div>This div will come in next line. No floating</div>
+    <div>This div will come in next line. No floating</div>
+    <span>This is floating</span><span>This is floating</span><span>This is floating</span><span>This is
+        floating</span><span>This is floating</span>
+
+    <div>
+        <label id="lblFirstName">First Name:</label>
+        <input id="txtFirstName" type="text" value="default value" />
+    </div>
+    <div>
+
+        <label id="lblSecondName">Second Name:</label>
+        <input id="txtSecondName" type="text" value="" placeholder="Enter Second Name" />
+    </div>
+    <div>
+        <label id="lblAge">Age Name:</label>
+        <input id="txtAge" type="text" value="age" />
+    </div>
+
+
+    <div>
+        <label id="">Department:</label>
+        <select id="department" onchange="handleDepartment(this)">
+            <option value="select">--Select--</option>
+            <option value="dept1">dept1</option>
+            <option value="dept2">dept2</option>
+            <option value="dept3">dept3</option>
+            <option value="dept4">dept4</option>
+        </select>
+    </div>
+
+    
+    <div>
+        <input id="btnSimple" type="submit" value="Simple" onclick="alert('validate if everthing ok')" ></input>
+        <input id="btnSubmit" type="submit" text='Submit' onclick="validate()" ></button>
+        <button id="btnSubmit" onclick="handleClick()">Close</button>
+    </div>
+    
+    <br />
+    <br />
+    <br />
 </body>
+
 </html>

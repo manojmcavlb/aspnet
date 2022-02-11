@@ -27,8 +27,8 @@
 //GIT FIRST TIME CONFIG for new folder or new machine or OS format.
 // 1. In VS, click account sync>githutub>Sign-in
 // 2. Configure
-// git config --global user.name "Manojkumar Mylsamy"
-// git config --global user.email manojmcavlb@gmail.com
+// git config --global user.name "ashispandabdk"
+// git config --global user.email ashis.panda.bdk@gmail.com
 // git config --global user.name/email "Manojkumar Mylsamy"
 
 // run below command to resolve Error: "json-server.ps1 cannot be loaded because running scripts is disabled on this system."
